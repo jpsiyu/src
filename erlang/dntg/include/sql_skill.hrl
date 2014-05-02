@@ -1,0 +1,3 @@
+-define(sql_get_all_skill, <<"select skill_id, lv from skill where id = ~p">>).
+-define(sql_insert_skill, <<"insert into skill set id = ~p, skill_id = ~p, lv = ~p ">>).
+-define(sql_update_skill_lv, <<"update skill set lv = ~p where id = ~p and skill_id = ~p">>).
