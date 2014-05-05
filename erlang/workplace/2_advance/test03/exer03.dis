@@ -1,0 +1,113 @@
+B6121CE4: i_func_info_IaaI 0 exer03 start 0 
+B6121CF8: allocate_zero_tt 1 0 
+B6121D00: i_make_fun_It -1240710840 0 
+B6121D0C: i_call_ext_e erlang:spawn/1 
+B6121D14: move_ry x(0) y(0) 
+B6121D1C: move_x1_c [{'_',[],[{return_trace}]}] 
+B6121D24: move_x2_c [local] 
+B6121D2C: move_cr {exer03,'_','_'} x(0) 
+B6121D34: call_bif_e erlang:trace_pattern/3 
+B6121D3C: move_x1_c true 
+B6121D44: move_x2_c [call,procs] 
+B6121D4C: move_yr y(0) x(0) 
+B6121D54: call_bif_e erlang:trace/3 
+B6121D5C: move_x1_c start2 
+B6121D64: move_yr y(0) x(0) 
+B6121D6C: i_trim_I 1 
+B6121D74: send 
+B6121D78: i_call_last_fP exer03:recv_loop/0 0 
+
+B6121D84: i_func_info_IaaI 0 exer03 recv_loop 0 
+B6121D98: allocate_tt 0 0 
+B6121DA0: i_loop_rec_fr f(B6121EDC) x(0) 
+B6121DA8: i_select_tuple_arity2_rfAfAf x(0) f(B6121EAC) 4 f(B6121DC0) 5 f(B6121E30) 
+B6121DC0: i_get_tuple_element_rPx x(0) 0 x(1) 
+B6121DCC: i_get_tuple_element_rPx x(0) 2 x(2) 
+B6121DD8: extract_next_element_x x(3) 
+B6121DE0: i_is_eq_exact_immed_fxc f(B6121EAC) x(1) trace 
+B6121DF0: i_is_eq_exact_immed_fxc f(B6121EAC) x(2) call 
+B6121E00: remove_message 
+B6121E04: test_heap_It 2 4 
+B6121E10: put_list_xnx x(3) [] x(1) 
+B6121E18: i_move_call_ext_cre "call: ~p~n" x(0) io:format/2 
+B6121E24: i_call_last_fP exer03:recv_loop/0 0 
+B6121E30: i_get_tuple_element_rPx x(0) 0 x(1) 
+B6121E3C: i_get_tuple_element_rPx x(0) 2 x(2) 
+B6121E48: extract_next_element2_x x(3) 
+B6121E50: i_is_eq_exact_immed_fxc f(B6121EAC) x(1) trace 
+B6121E60: i_is_eq_exact_immed_fxc f(B6121EAC) x(2) return_from 
+B6121E70: remove_message 
+B6121E74: test_heap_It 4 5 
+B6121E80: put_list_xcr x(4) [] x(0) 
+B6121E8C: put_list_xrx x(3) x(0) x(1) 
+B6121E94: i_move_call_ext_cre "return from ~p => ~p~n" x(0) io:format/2 
+B6121EA0: i_call_last_fP exer03:recv_loop/0 0 
+B6121EAC: remove_message 
+B6121EB0: test_heap_It 2 1 
+B6121EBC: put_list_rnx x(0) [] x(1) 
+B6121EC4: i_move_call_ext_cre "~p~n" x(0) io:format/2 
+B6121ED0: i_call_last_fP exer03:recv_loop/0 0 
+B6121EDC: wait_locked_f f(B6121DA0) 
+
+B6121EE4: i_func_info_IaaI 0 exer03 do_trace 0 
+B6121EF8: i_loop_rec_fr f(B6121F3C) x(0) 
+B6121F00: i_select_val2_rfcfcf x(0) f(B6121F34) start2 f(B6121F28) start1 f(B6121F18) 
+B6121F18: remove_message 
+B6121F1C: i_move_call_only_fcr exer03:f/1 4 x(0) 
+B6121F28: remove_message 
+B6121F2C: i_call_only_f exer03:loop/0 
+B6121F34: loop_rec_end_f exer03:do_trace/0 
+B6121F3C: wait_locked_f exer03:do_trace/0 
+
+B6121F44: i_func_info_IaaI 0 exer03 f 1 
+B6121F58: i_jump_on_val_zero_rfI x(0) f(B6121F70) 2 f(B6121F6C) f(B6121F6C) 
+B6121F6C: return 
+B6121F70: allocate_zero_tt 1 1 
+B6121F78: i_fetch_rc x(0) 1 
+B6121F80: i_minus_jId j(00000000) 1 x(1) 
+B6121F90: move_ry x(0) y(0) 
+B6121F98: move_call_xrf x(1) x(0) exer03:f/1 
+B6121FA4: i_fetch_yc y(0) 2 
+B6121FB0: i_minus_jId j(00000000) 1 x(1) 
+B6121FC0: move_ry x(0) y(0) 
+B6121FC8: move_call_xrf x(1) x(0) exer03:f/1 
+B6121FD4: i_fetch_yr y(0) x(0) 
+B6121FDC: i_plus_jId j(00000000) 1 x(0) 
+B6121FEC: deallocate_return_Q 1 
+
+B6121FF4: i_func_info_IaaI 0 exer03 loop 0 
+B6122008: allocate_tt 0 0 
+B6122010: i_move_call_ext_cre "Hello~n" x(0) io:format/1 
+B612201C: i_move_call_ext_cre 2000 x(0) timer:sleep/1 
+B6122028: i_call_last_fP exer03:loop/0 0 
+
+B6122034: i_func_info_IaaI 0 exer03 test1 0 
+B6122048: i_call_only_f exer03:start/0 
+
+B6122050: i_func_info_IaaI 0 exer03 test2 0 
+B6122064: allocate_tt 0 0 
+B612206C: i_call_ext_e dbg:tracer/0 
+B6122074: move_x2_c '_' 
+B612207C: move_x1_c f 
+B6122084: move_cx [{'_',[],[{return_trace}]}] x(3) 
+B6122090: i_move_call_ext_cre exer03 x(0) dbg:tpl/4 
+B612209C: move_x1_c [c] 
+B61220A4: i_move_call_ext_cre all x(0) dbg:p/2 
+B61220B0: i_move_call_last_fPcr exer03:f/1 0 4 x(0) 
+
+B61220C0: i_func_info_IaaI 0 exer03 module_info 0 
+B61220D4: move_cr exer03 x(0) 
+B61220DC: allocate_tt 0 1 
+B61220E4: call_bif_e erlang:get_module_info/1 
+B61220EC: deallocate_return_Q 0 
+
+B61220F4: i_func_info_IaaI 0 exer03 module_info 1 
+B6122108: move_rx x(0) x(1) 
+B6122110: move_cr exer03 x(0) 
+B6122118: allocate_tt 0 2 
+B6122120: call_bif_e erlang:get_module_info/2 
+B6122128: deallocate_return_Q 0 
+
+B6122130: i_func_info_IaaI 0 exer03 '-start/0-fun-0-' 0 
+B6122144: i_call_only_f exer03:do_trace/0 
+
