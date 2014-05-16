@@ -1,0 +1,3 @@
+erlang:send_after(Time, Dest, Msg), when Dest is a process in local node, thing is ok; if it's remote node, error comes
+change to the method below to finish your job:
+spawn(fun(0 -> timer:sleep(Time), Dest ! Msg end)
